@@ -1,6 +1,0 @@
-:HL["/_next/static/chunks/3lx134q6hovru.css","style"]
-:HL["/_next/static/media/LexendGiga_VariableFont_wght-s.p.00qjmmoncl65v.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/_next/static/media/PretendardVariable-s.p.0ztvx5mb7lxp4.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-2:[["children",{"s":"__PAGE__","h":160}]]
-1:[["children",{"s":"discography","h":96,"c":"$Q2"}]]
-0:{"b":"ElsL07LxXgNvTuYmt5KV2","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --white: #d4d4d8;
+  --black: #0f0e17;
+
+  --background: var(--white);
+  --foreground: var(--black);
+
+  --primary: #e0e1cc;
+  --primary-foreground: #1f1e33;
+}
+
+.dark {
+  --background: var(--black);
+  --foreground: var(--white);
+
+  --primary: #1f1e33;
+  --primary-foreground: #e0e1cc;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+ 
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 45 930;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/pretendard/PretendardVariable.woff2') format('woff2-variations');
+}
+ 
+@font-face {
+  font-family: 'LexendGiga';
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/lexendgiga/LexendGiga-VariableFont_wght.woff2') format('woff2-variations');
+}
+ 
+@font-face {
+  font-family: 'Lexend';
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/lexend/Lexend-VariableFont_wght.woff2') format('woff2-variations');
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-pretendard: 'Pretendard';
+  --font-lexendgiga: 'LexendGiga';
+  --font-lexend: 'Lexend';
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
