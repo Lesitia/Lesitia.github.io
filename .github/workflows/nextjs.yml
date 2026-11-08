@@ -74,7 +74,7 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build && touch out/.nojekyll && git config user.name "Lesitia" && git config user.email "87454842+Lesitia@users.noreply.github.com" && npx gh-pages -d out -b deploy -t
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build && touch out/.nojekyll && git config --global user.name "Lesitia" && git config --global user.email "87454842+Lesitia@users.noreply.github.com" && npx gh-pages -d out -b deploy -t
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
