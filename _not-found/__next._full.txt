@@ -1,0 +1,23 @@
+1:"$Sreact.fragment"
+2:"/_next/static/chunks/0rpfx9vesjy7e.js"
+3:I[19710,["$2"],"ThemeProvider"]
+4:I[5500,["$2"],"Image"]
+6:I[39756,["$2"],"default"]
+7:I[37457,["$2"],"default"]
+a:I[97367,["$2"],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:"ViewportBoundary"
+e:I[97367,["$2"],"$d"]
+10:"MetadataBoundary"
+11:I[97367,["$2"],"$10"]
+13:I[68027,[],"default",1]
+:HL["/_next/static/chunks/3vrzd2_pg7_8z.css","style"]
+8:X
+9:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":[null,null,["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],"p":false,"v":null}}]]
+5:[["children",{"s":"/_not-found","h":512,"d":{"r":["$","$1","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$8"},"c":"$Q9"}]]
+0:{"P":null,"c":["","_not-found",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/3vrzd2_pg7_8z.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/0rpfx9vesjy7e.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"ko","className":"BqR8NW_variable ri8daa_variable flex h-screen items-center justify-center antialiased bg-background transition-color duration-200 ease-out","suppressHydrationWarning":true,"children":["$","body",null,{"className":"bg-inherit","children":["$","$L3",null,{"children":["$","div",null,{"className":"min-h-full flex flex-col bg-background text-(--primary-foreground) transition-color duration-200 ease-out","children":["$","div",null,{"className":"flex flex-col flex-1 items-center justify-center font-sans","children":["$","div",null,{"className":"flex flex-col items-center justify-center gap-10 text-center","children":[["$","$L4",null,{"className":"h-[60px] w-[60px]","src":{"src":"/_next/static/media/Logo.3_bh5fcw37tcf.webp","width":1080,"height":1080,"blurWidth":8,"blurHeight":8,"blurDataURL":"data:image/webp;base64,UklGRhwBAABXRUJQVlA4TBABAAAvB8ABAM1VICICHgiADQIAAICPXqWtwH8EJQlwCAQAAAAAAAAAAAAAAAAAAAAAAAAcgJSeKuAIqF4BAAA8EIAcBAAAgPO//tcCE0QwgEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEaArC/qt/08EIAjBAAAgPP/7bfR96UEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQH2C/zy4yk/Py/+3mS/lNhQEMxFDSj+mRSA0GAwAoAPz0u3iHFM9bRVNsitWoKfcutpRRdZgdrZ6XplUYh7ti2NsazciSoQg1ZyXNuTBLHeRe83OeV1x6cB38Jg9Juj2zWNpsb5P2pTSn4pm84Qi8r98cwySMaWzHCw=="},"alt":"logo","width":80,"height":80,"priority":true}],["$","h1",null,{"className":"font-pretendard text-7xl font-[900] leading-4 tracking-tight","children":"404"}],["$","p",null,{"className":"font-lexendgiga text-3xl font-semibold leading-4 tracking-tight","children":"Page Not Found."}],["$","br",null,{}],["$","form",null,{"action":"/","method":"get","children":["$","button",null,{"type":"submit","className":"font-lexendgiga inline-block px-4 py-2 bg-[#3f3d66] rounded-md hover:bg-[#1f1e33] tracking-[-0.1em] font-[600]","children":"Return to Main page"}]}]]}]}]}]}]}]}]]}],"p":false,"v":null},"c":"$Q5"},"h":{"r":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$Le",null,{"children":"$Lf"}],["$","$L11",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$b",null,{"name":"Next.Metadata","children":"$L12"}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":false,"v":null}},"m":"$undefined","G":["$13",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"cJszpoEofqa_d2v9BJ6Ev"}
+8:C
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+14:I[27201,["$2"],"IconMark"]
+c:null
+12:[["$","title","0",{"children":"404 / Page Not Found"}],["$","meta","1",{"name":"description","content":"There's nothing."}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.199suy2t9otea.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L14","3",{}]]
