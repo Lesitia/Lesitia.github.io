@@ -74,9 +74,7 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
-      - name: Add .nojekyll file
-        run: touch ./out/.nojekyll  # Generates the file inside the build folder before deployment
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build && touch out/.nojekyll && gh-pages -d out -b deploy -t
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
