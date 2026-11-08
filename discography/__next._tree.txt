@@ -4,4 +4,4 @@
 :HL["/_next/static/media/PretendardVariable-s.p.0ztvx5mb7lxp4.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"discography","h":96,"c":"$Q2"}]]
-0:{"b":"QeyKBDK1wROfjefX4wF-g","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"GmOjcLG0aArfxsDX29ZAQ","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
