@@ -44,7 +44,7 @@ export default async function RootPage({ params }: PageProps) {
 						{t.guideline.disclaimer.sub.prefix} <Link target="_blank" rel="noopener noreferrer" href={`${t.guideline.href}`} className="text-blue-600 dark:text-blue-300 hover:underline">{t.guideline.hrefname}</Link>{t.guideline.disclaimer.sub.suffix}
 					</p>
 				</div>
-				<div className="flex flex-col font-language items-center py-[30px] justify-center bg-black/10 dark:bg-[#3f3d66]/50 w-full h-fit transition-padding duration-200 lg:duration-0 ease-out">
+				<div className="flex flex-col font-language items-center py-[30px] justify-center bg-black/17.5 dark:bg-[#3f3d66]/50 w-full h-fit transition-padding duration-200 lg:duration-0 ease-out">
 					<p className="font-[700] text-4xl">
 						{t.guideline.main.name}
 					</p>
@@ -85,10 +85,6 @@ export default async function RootPage({ params }: PageProps) {
 							{t.guideline.restriction.audio.desc1}<br/>
 						{t.guideline.restriction.audio.desc2}<br/>
 						{t.guideline.restriction.audio.desc3}<br/>
-					</p>
-
-					<p className="font-[500] break-keep text-xs">
-						{t.guideline.restriction.name}
 					</p>
 					<br/>
 					<p className="font-[500] break-keep">
