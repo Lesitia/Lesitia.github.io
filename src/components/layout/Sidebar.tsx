@@ -64,26 +64,6 @@ const menuItems: MenuItem[] = [
 ];
 
 export default function Sidebar() {
-	useEffect(() => {
-		console.log("Sidebar mounted");
-
-		return () => {
-			console.log("Sidebar unmounted");
-		};
-	}, []);
-	
-	useEffect(() => {
-    const handleBeforeUnload = () => {
-        console.log("Browser page unloading");
-    };
-
-    window.addEventListener("beforeunload", handleBeforeUnload);
-
-    return () => {
-        window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
-}, []);
-
     const pathname = usePathname();
 
     const [isOpen, setIsOpen] = useState(false);
@@ -328,7 +308,7 @@ export default function Sidebar() {
                     fixed left-0 top-[70px] z-50 h-[calc(100dvh-70px)] w-64
                     bg-[#7ebeee] dark:bg-[#1f1e33]
                     overflow-hidden
-					transition-[width,transform] duration-500 ease-in-out
+					transition-[width,transform] duration-200 ease-in-out
 					will-change-[width,transform]
                     ${
                         isOpen
