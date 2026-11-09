@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002F[lang]","\u002F[lang]\u002Fdiscography","\u002F[lang]\u002Fdiscography\u002Fcompilation","\u002F[lang]\u002Fdiscography\u002Fsingle","\u002F[lang]\u002Fguideline"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
