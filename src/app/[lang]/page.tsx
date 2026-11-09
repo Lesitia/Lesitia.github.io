@@ -1,10 +1,3 @@
-import ImageOverlay from "@/styles/components/ImageOverlay";
-import background from "@/../public/Images/bg.webp"
-import discordLogo from "@/../public/Images/discord-white-icon.svg"
-import ytLogo from "@/../public/Images/yt_icon_white_digital.webp"
-import Image from "next/image";
-import PopupLink from "@/styles/components/PopupLink";
-
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,25 +5,51 @@ export const metadata: Metadata = {
 	description: "Official website of a composer \"Lesitia.\"",
 };
 
-export default function RootPage() {
+import Image from "next/image";
+
+import { isLocale } from "@/i18n/config";
+import { getDictionary } from "@/i18n/dict";
+
+import ImageOverlay from "@/components/ImageOverlay";
+import PopupLink from "@/components/PopupLink";
+
+import { BG, Logo_youtube, Logo_discord } from "@/assets";
+import Link from "next/link";
+import { ElapsedTimeCounter } from "@/components/TimeCounters";
+
+interface PageProps {
+    params: Promise<{
+        lang: string;
+    }>;
+}
+
+export default async function RootPage({ params }: PageProps) {
+    const { lang } = await params;
+
+    if (!isLocale(lang)) {
+    return null;
+    }
+
+	const t = getDictionary(lang);
+	
 	return (
 		<div className="flex flex-row flex-1 font-sans items-start text-(--primary-foreground) transition-color duration-200 ease-out">
 			<div className="absolute fixed w-full h-[70px] z-100 flex flex-row flex-1 items-center justify-center">
-				<span className="font-lexendgiga font-semibold leading-10 tracking-[-0.1em] text-primary-foreground text-2xl tracking-[-0.15em]">
+				<span className="font-lexendgiga font-semibold leading-10 tracking-[-0.1em] text-primary-foreground text-2xl lg:text-3xl tracking-[-0.15em] transition-text duration-200 ease-out">
 					Main page
 				</span>
 			</div>
 			<div className="flex flex-col pt-[70px] w-full min-h-[100vh]">
 				<ImageOverlay
-					src={background}
+					src={BG}
 					alt=""
 					title="Lesitia."
 					subtitle="// Composer that has filled with chaotic mind. //"
 					textStyle="text-[#e0e1cc] text-7xl font-semibold italic font-lexendgiga tracking-[-0.1em]"
-					subTextStyle="text-[#e0e1cc] text-xl font-regular italic font-lexendgiga tracking-[-0.125em]"
+					subTextStyle="text-[#e0e1cc] text-lg md:text-2xl font-regular italic font-lexendgiga tracking-[-0.15em] sm:tracking-[-0.125em] transition-text duration-200 ease-out"
 					overlayColor="bg-[#000]/70"
 				>
-					<br />
+					<br/>
 					<div className="flex flex-row gap-[15px]">
 				
 						<PopupLink
@@ -44,7 +63,7 @@ export default function RootPage() {
 							popupText=
 							{
 								<h1 className="font-lexendgiga tracking-[-0.125em] font-semibold italic text-(--primary-foreground)">
-									YouTube
+									{t.main.links.youtube}
 								</h1>
 							}
 						>
@@ -59,7 +78,7 @@ export default function RootPage() {
 							active:scale-[0.9]
 							">
 								<Image
-									src={ytLogo}
+									src={Logo_youtube}
 									alt=""
 									width={60}
 									height={60}
@@ -79,10 +98,10 @@ export default function RootPage() {
 							{
 								<div>
 									<h1 className="font-lexendgiga tracking-[-0.125em] font-semibold italic text-(--primary-foreground)">
-										{"\"Lesitia's Celestial\""}
+										{`"${t.main.links.discordName}"`}
 									</h1>
-									<p className="font-lexendgiga tracking-[-0.125em] font-semibold italic text-(--primary-foreground) text-sm">
-										Discord server
+									<p className="font-lexend tracking-[0em] font-semibold italic text-(--primary-foreground) text-sm">
+										{t.main.links.discord}
 									</p>
 								</div>
 							}
@@ -100,7 +119,7 @@ export default function RootPage() {
 							active:scale-[0.9]
 							">
 								<Image
-									src={discordLogo}
+									src={Logo_discord}
 									alt=""
 									width={30}
 								>
@@ -109,21 +128,23 @@ export default function RootPage() {
 						</PopupLink>
 					</div>
 				</ImageOverlay>
-				<div className="flex flex-col place-content-center items-center px-[120px] py-[10px] justify-center w-full h-full">
-					<p className=" font-pretendard font-[700] text-2xl">
-						이 사이트는 <i className="font-lexendgiga font-[500] tracking-[-0.1em]">{"\"Lesitia.\""}</i> 의 공식 사이트입니다.
+				<div className="flex flex-col place-content-center items-center py-[10px] justify-center w-full h-full">
+					<p className="font-language font-[700] text-2xl">
+						{t.main.introduction.first} <i className="font-lexendgiga font-[500] tracking-[-0.1em]">{"\"Lesitia.\""}</i> {t.main.introduction.second}
 					</p>
-					<p className="font-pretendard font-[600]">
-						이곳에서 저의 곡에 대한 정보를 확인할 수 있습니다.
+					<p className="font-language font-[600]">
+						{t.main.introduction.description}
 					</p>
 				</div>
-				<div className="flex flex-col place-content-center px-[20vw] py-[30px] justify-center bg-black/10 dark:bg-[#3f3d66]/50 w-full h-[300px]">
+				<div className="flex flex-col place-content-center px-[30px] md:px-[60px] lg:px-[20vw] py-[30px] justify-center bg-black/10 dark:bg-[#3f3d66]/50 w-full h-fit transition-padding duration-200 lg:duration-0 ease-out">
 					<p className="font-lexendgiga font-[700] text-4xl italic tracking-[-0.1em] leading-[1.5]">
 						Bio
 					</p>
-					<p className="font-pretendard font-[600]">
-						안녕하세요, <i className="font-lexendgiga font-[500] tracking-[-0.1em]">{"\"Lesitia.\""}</i> 입니다.<br />
-						
+					<p className="font-language font-[600] break-keep">
+						{t.main.bio.greeting.prefix} <i className="font-lexendgiga font-[500] tracking-[-0.1em]">{"\"Lesitia.\""}</i> {t.main.bio.greeting.suffix}<br/><br/>
+						{t.main.bio.description.line1} ({t.main.bio.description.fromstart.prefix}<ElapsedTimeCounter target="2022-02-20T00:00:00+09:00" format="compact" locale={lang} compactLen={1}/>{t.main.bio.description.fromstart.suffix})<br/>
+						{t.main.bio.description.line2}<br/>
+						{t.main.bio.description.line3_1} <Link href={`/${lang}/guideline`} className="text-blue-600 dark:text-blue-300 hover:underline">Guideline</Link> {t.main.bio.description.line3_2}<br/>
 					</p>
 				</div>
 				<p className="mt-auto bottom-0 left-0 w-full h-40 font-lexendgiga font-[700] h-full text-right tracking-[-0.1em] p-[10px]">© 2020~ Lesitia. / All rights reserved.</p>

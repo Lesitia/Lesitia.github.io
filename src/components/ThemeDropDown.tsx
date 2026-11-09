@@ -73,7 +73,7 @@ export function ThemeDropdown() {
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
         aria-expanded={isOpen}
-        className="flex items-center justify-between gap-2 w-40 h-[44px] px-3 rounded-md bg-white dark:bg-background text-primary-foreground text-sm hover:bg-zinc-50 dark:hover:bg-[#3f3d66] font-lexendgiga tracking-[-0.1em] transition-colors"
+        className="flex items-center justify-between gap-2 w-[178px] h-[44px] px-3 rounded-md bg-white dark:bg-background text-primary-foreground text-sm hover:bg-zinc-50 dark:hover:bg-[#3f3d66] font-lexendgiga tracking-[-0.1em] transition-colors"
       >
         <span className="flex items-center gap-2">
           {activeOption.icon}
@@ -88,7 +88,7 @@ export function ThemeDropdown() {
 
       {/* Animated Dropdown Menu */}
       <div
-        className={`absolute right-0 mt-1.5 w-40 origin-top rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-background shadow-lg z-50 transition-all duration-200 ease-out ${
+        className={`absolute right-0 mt-1.5 w-40 origin-top rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-background shadow-lg z-50 transition-all duration-200 ease-out overflow-hidden ${
           isOpen
             ? "opacity-100 scale-100 translate-y-0 pointer-events-auto visible"
             : "opacity-0 scale-90 -translate-y-2 pointer-events-none invisible"

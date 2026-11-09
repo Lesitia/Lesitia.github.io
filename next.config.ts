@@ -9,7 +9,6 @@ const nextConfig: NextConfig = {
 	},
 	experimental: {
 		agentFeedback: true,
-		globalNotFound: true,
 	},
 	turbopack: {
 		rules: {

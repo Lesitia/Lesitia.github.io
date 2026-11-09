@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "src/styles/components/Sidebar.js"  ],
+, "src/components/Sidebar.js"  ],
   "exclude": ["node_modules"]
 }

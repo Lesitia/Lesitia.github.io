@@ -1,15 +1,17 @@
+import singleCover from "@/../public/Images/jackets/another2026.webp";
+import compilationCover from "@/../public/Images/jackets/sixis3rd.webp";
+import DiscographyInfo from "@/components/DiscographyInfo";
+import { isLocale } from "@/i18n/config";
+import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
+import { notFound } from "next/navigation";
 import { Metadata } from "next";
+import { getDictionary } from "@/i18n/dict";
 
 export const metadata: Metadata = {
     title: "Lesitia. / Discography",
     description: 'Official website of a composer "Lesitia."',
 };
-
-import singleCover from "@/../public/Images/jackets/another2026.webp";
-import compilationCover from "@/../public/Images/jackets/sixis3rd.webp";
-import Link from "next/link";
-import DiscographyInfo from "@/styles/components/DiscographyInfo";
 
 interface Release {
     title: string;
@@ -29,7 +31,21 @@ const recentCompilations: Release = {
 	cover: compilationCover,
 };
 
-export default function RootPage() {
+interface PageProps {
+    params: Promise<{
+        lang: string;
+    }>;
+}
+
+export default async function RootPage({ params }: PageProps) {
+	const { lang } = await params;
+
+	if (!isLocale(lang)) {
+		notFound();
+	}
+
+	const t = getDictionary(lang);
+
     return (
         <div className="flex flex-row flex-1 font-sans items-start text-(--primary-foreground) transition-colors duration-200 ease-out">
 
@@ -43,7 +59,7 @@ export default function RootPage() {
             <div className="flex flex-col pt-[70px] w-full min-h-screen font-lexendgiga">
 
                 {/* Total Discography */}
-				<DiscographyInfo/>
+				<DiscographyInfo lang={lang} />
                 {/* Recent Releases */}
                 <div className="flex flex-col lg:flex-row place-content-center items-center px-[5vw] lg:px-[10vw] py-[30px] w-full h-auto gap-[30px] transition-all duration-200 ease-out">
 
@@ -55,7 +71,7 @@ export default function RootPage() {
 							</p>
 
 							<p className="font-pretendard font-[600] text-sm opacity-60 mb-5">
-								최근 발매한 싱글
+								{t.discography.latestSingle}
 							</p>
 
 							<div className="flex flex-col items-center w-full gap-3">
@@ -66,6 +82,7 @@ export default function RootPage() {
 										fill
 										className="object-cover"
 										sizes="280px"
+										loading="eager"
 									/>
 								</div>
 
@@ -82,7 +99,7 @@ export default function RootPage() {
 						</div>
 						<div className="flex min-h-[40px]" />
 
-						<Link href="/discography/single">
+						<Link href={`/${lang}/discography/single`}>
 							<button
 								type="submit"
 								className="font-lexendgiga inline-block px-4 py-2 rounded-md bg-(--primary) hover:bg-(--primary-foreground) text:bg-(--primary-foreground) hover:text-(--primary) tracking-[-0.1em] font-[600] transition-all duration-200 ease-out"
@@ -100,7 +117,7 @@ export default function RootPage() {
 							</p>
 
 							<p className="font-pretendard font-[600] text-sm opacity-60 mb-5">
-								최근 발매한 싱글
+								{t.discography.latestCompilation}
 							</p>
 
 							<div className="flex flex-col items-center w-full gap-3">
@@ -111,6 +128,7 @@ export default function RootPage() {
 										fill
 										className="object-cover"
 										sizes="280px"
+										loading="eager"
 									/>
 								</div>
 
@@ -126,7 +144,7 @@ export default function RootPage() {
 							</div>
 						</div>
 						<div className="flex min-h-[40px]" />
-						<Link href="/discography/single">
+						<Link href={`/${lang}/discography/compilation`}>
 							<button
 								type="submit"
 								className="font-lexendgiga inline-block px-4 py-2 rounded-md bg-(--primary) hover:bg-(--primary-foreground) text:bg-(--primary-foreground) hover:text-(--primary) tracking-[-0.1em] font-[600] transition-all duration-200 ease-out"

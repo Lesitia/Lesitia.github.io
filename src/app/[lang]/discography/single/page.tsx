@@ -1,15 +1,29 @@
 import lastmemories from "@/../public/Images/jackets/lastmemories.webp";
 import another2026 from "@/../public/Images/jackets/another2026.webp";
-import AlbumList from "@/styles/components/AlbumList";
+import AlbumList from "@/components/AlbumList";
+import DiscographyInfo from "@/components/DiscographyInfo";
+import { isLocale } from "@/i18n/config";
 import { Metadata } from "next";
-import DiscographyInfo from "@/styles/components/DiscographyInfo";
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
 	title: "Lesitia. / Singles",
 	description: "Official website of a composer \"Lesitia.\"",
 };
 
-export default function RootPage() {
+
+interface PageProps {
+	params: Promise<{
+		lang: string;
+	}>;
+}
+
+export default async function RootPage({ params }: PageProps) {
+	const { lang } = await params;
+
+	if (!isLocale(lang)) {
+		notFound();
+	}
 	return (
 		<div className="flex flex-row flex-1 font-lexendgiga items-start text-(--primary-foreground) transition-color duration-200 ease-out">
 			<div className="absolute fixed w-full h-[70px] z-100 flex flex-row flex-1 items-center justify-center">
@@ -19,7 +33,7 @@ export default function RootPage() {
 			</div>
 			<div className="flex flex-col pt-[70px] w-full min-h-[100vh]">
 				{/* Total Discography */}
-				<DiscographyInfo/>
+				<DiscographyInfo lang={lang}/>
 				<AlbumList
 					src={lastmemories}
 					index={1}

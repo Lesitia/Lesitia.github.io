@@ -1,17 +1,27 @@
-import mgg1st from "@/../public/Images/jackets/mgg1st.webp";
-import mgg2nd from "@/../public/Images/jackets/mgg2nd.webp";
-import sixis1st from "@/../public/Images/jackets/sixis1st.webp";
-import sixis3rd from "@/../public/Images/jackets/sixis3rd.webp";
-import AlbumList from "@/styles/components/AlbumList";
-import DiscographyInfo from "@/styles/components/DiscographyInfo";
+import { Jacket_mgg1st, Jacket_mgg2nd, Jacket_sixis1st, Jacket_sixis3rd } from "@/assets";
+import AlbumList from "@/components/AlbumList";
+import DiscographyInfo from "@/components/DiscographyInfo";
+import { isLocale } from "@/i18n/config";
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
 	title: "Lesitia. / Compilations",
 	description: "Official website of a composer \"Lesitia.\"",
 };
 
-export default function RootPage() {
+interface PageProps {
+	params: Promise<{
+		lang: string;
+	}>;
+}
+
+export default async function RootPage({ params }: PageProps) {
+	const { lang } = await params;
+
+	if (!isLocale(lang)) {
+		notFound();
+	}
 	return (
 		<div className="flex flex-row flex-1 font-lexendgiga items-start text-(--primary-foreground) transition-color duration-200 ease-out">
 			<div className="absolute fixed w-full h-[70px] z-100 flex flex-row flex-1 items-center justify-center">
@@ -22,9 +32,9 @@ export default function RootPage() {
 			
 			<div className="flex flex-col pt-[70px] w-full min-h-[100vh] justify-items-center">
 				{/* Total Discography */}
-				<DiscographyInfo/>
+				<DiscographyInfo lang={lang}/>
 				<AlbumList
-					src={mgg1st}
+					src={Jacket_mgg1st}
 					index={1}
 					title="Acropolix Collapxis"
 					subtitle="From MGG 1st Compilation"
@@ -44,7 +54,7 @@ export default function RootPage() {
 					}
 				/>
 				<AlbumList
-					src={sixis1st}
+					src={Jacket_sixis1st}
 					index={2}
 					title="Asteroid Adventure"
 					subtitle="From SIXIS 1st Compilation"
@@ -63,7 +73,7 @@ export default function RootPage() {
 					}
 				/>
 				<AlbumList
-					src={mgg2nd}
+					src={Jacket_mgg2nd}
 					index={3}
 					title="Destroyer"
 					subtitle="From MGG 2nd Compilation"
@@ -82,7 +92,7 @@ export default function RootPage() {
 					}
 				/>
 				<AlbumList
-					src={sixis3rd}
+					src={Jacket_sixis3rd}
 					index={4}
 					title="Secret Submission"
 					subtitle="From SIXIS 3rd Compilation"
