@@ -1,4 +1,4 @@
-:HL["/_next/static/chunks/3_l-6k0axq-d_.css","style"]
+:HL["/_next/static/chunks/02cqcoiczs_l9.css","style"]
 :HL["/_next/static/chunks/3rii1eh8v58ne.css","style"]
 :HL["/_next/static/media/LexendGiga_VariableFont_wght-s.p.00qjmmoncl65v.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/Lexend_VariableFont_wght-s.p.0mysbffztmyd6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -6,4 +6,4 @@
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":"discography","h":96,"c":"$Q3"}]]
 1:[["children",{"s":{"n":"lang","t":"d","k":"ko","s":[]},"h":96,"c":"$Q2"}]]
-0:{"b":"xsvCwLY6AcjnCpzW91i9k","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"QkFChRfFJU3G_RmVT5Nt_","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
